@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: "サンプルテキスト"
-description: "サンプルです"
+title: "サンプルテキスト2"
+description: "サンプル2です"
 year: "2022"
 month: "12"
 date: "18"
@@ -9,7 +9,7 @@ date: "18"
 
 # Hello World
 
-こんにちは
+こんばんわ
 
 ## h2
 
