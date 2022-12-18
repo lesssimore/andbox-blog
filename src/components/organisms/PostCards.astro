@@ -1,0 +1,27 @@
+---
+import PostCard from "../molecules/PostCard.astro";
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  year: number;
+  month: number;
+  date: number;
+}
+const posts = await Astro.glob<Frontmatter>("../../pages/post/*.md");
+---
+
+<article>
+  {
+    posts.map((post) => (
+      <PostCard
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        year={post.frontmatter.year}
+        month={post.frontmatter.month}
+        date={post.frontmatter.date}
+        url={post.url!}
+      />
+    ))
+  }
+</article>
