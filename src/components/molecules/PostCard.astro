@@ -2,12 +2,10 @@
 export interface Props {
   title: string;
   description: string;
-  year: number;
-  month: number;
-  date: number;
+  createdAt: string;
   url: string;
 }
-const { title, description, year, month, date, url } = Astro.props;
+const { title, description, createdAt, url } = Astro.props;
 ---
 
 <section class="my-5 py-5 w-full bg-amber-50 shadow-xl px-8">
@@ -15,7 +13,7 @@ const { title, description, year, month, date, url } = Astro.props;
     <div class="flex flex-row justify-between py-5">
       <h1 class="text-3xl font-bold">{title}</h1>
       <p class="pb-5">
-        {year}年{month}月{date}日
+        {createdAt}
       </p>
     </div>
     <p>{description}</p>
