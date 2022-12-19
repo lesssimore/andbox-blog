@@ -1,4 +1,5 @@
 ---
+import { getPosts } from "../../library/postFetcher";
 import PostCard from "../molecules/PostCard.astro";
 
 interface Frontmatter {
@@ -8,20 +9,20 @@ interface Frontmatter {
   month: number;
   date: number;
 }
-const posts = await Astro.glob<Frontmatter>("../../pages/post/*.md");
+const posts = await getPosts({
+  fields: ["id", "title", "description", "createdAt"],
+});
 ---
 
 <article class="w-full py-5">
   <h1 class="text-center text-4xl font-bold py-5">記事一覧</h1>
   {
-    posts.map((post) => (
+    posts.contents.map((post) => (
       <PostCard
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        year={post.frontmatter.year}
-        month={post.frontmatter.month}
-        date={post.frontmatter.date}
-        url={post.url!}
+        title={post.title}
+        description={post.description}
+        createdAt={post.createdAt}
+        url={`/post/${post.id}`}
       />
     ))
   }
