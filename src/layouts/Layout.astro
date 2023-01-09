@@ -5,13 +5,14 @@ import Header from "../components/organisms/Header.astro";
 export interface Props {
   title: string;
   description: string;
+  ogType?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ogType } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -27,7 +28,7 @@ const { title, description } = Astro.props;
     <meta content={description} name="description" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="ブログ" />
+    <meta property="og:type" content={ogType ? ogType : "website"} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:site_name" content="ゆっきーの砂場" />
     <meta property="og:locale" content="ja_JP" />
