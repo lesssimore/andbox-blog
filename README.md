@@ -1,50 +1,72 @@
-# Welcome to [Astro](https://astro.build)
+# ゆっきーの砂場
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+## 概要
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+ゆっきー(Yoshino-Yukitaro)のブログである[ゆっきーの砂場](https://yukky-sandbox.dev)のソースコードのリポジトリです。
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## 主な使用技術
 
+### パッケージ管理
 
-## 🚀 Project Structure
+- yarn v1 系
 
-Inside of your Astro project, you'll see the following folders and files:
+### メイン
 
+- Astro v1.9.2
+- tailwindcss v3.0.24
+
+### テスト
+
+- playwright v1.29.2
+
+### リンター
+
+- eslint v8.0.1
+- prettier v2.8.2
+
+### バックエンド SaaS
+
+- microCMS
+
+## ローカルでの使い方
+
+### 必須
+
+- microCMS のアカウント
+- microCMS の API Key
+- yarn 1 系
+
+### 手順
+
+#### Git Clone する
+
+```shell
+git clone git@github.com:Yoshino-Yukitaro/yukky-sandbox.git
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+
+#### 依存関係のインストール
+
+```shell
+cd yukky-sandbox
+yarn
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+#### .env ファイルを追加、更新する
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```shell
+touch .env
+echo "MICROCMS_SERVICE_DOMAIN=${microcmsのドメイン名(.microcms.ioを含まない)}" >> ./.env
+echo "MICROCMS_API_KEY=${microcmsのAPI Key}" >> ./.env
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+#### 起動してみる
 
-## 🧞 Commands
+```shell
+yarn run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+`http://localhost:3000`にアクセス
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+## ご意見・質問など
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Github の issue](https://github.com/Yoshino-Yukitaro/yukky-sandbox/issues)にてお願いいたします。

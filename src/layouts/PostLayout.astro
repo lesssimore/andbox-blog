@@ -7,20 +7,30 @@ export interface Props {
   createdAt: string;
 }
 const { title, description, createdAt } = Astro.props;
+const OG_TYPE = "article";
+const dateTypeCreatedAt = new Date(createdAt);
 ---
 
-<Layout title={title} description={description}>
-  <article class="mx-10 my-5 py-5 lg:w-1/2 bg-amber-50 shadow-xl px-8">
-    <h1 class="md:text-5xl text-3xl px-6 py-5 font-bold">
+<Layout title={title} description={description} ogType={OG_TYPE}>
+  <article
+    class="mx-10 my-5 py-5 lg:w-1/2 bg-amber-50 dark:bg-black shadow-xl px-8 w-full"
+  >
+    <h1 class="md:text-5xl text-3xl px-6 py-5 font-bold dark:text-white">
       {title}
     </h1>
-    <p class="px-6">
-      {createdAt}
+    <p class="px-6 dark:text-white">
+      {
+        `${dateTypeCreatedAt.getFullYear()}年${
+          dateTypeCreatedAt.getMonth() + 1
+        }月${dateTypeCreatedAt.getDate()}日 投稿`
+      }
     </p>
-    <section
-      class="prose dark:prose-invert md:prose-h1:text-4xl prose-h1:text-2xl md:prose-h2:text-3xl prose-h2:text-xl prose-h1:border-b-yellow-700 prose-h1:border-b-2 prose-h1:font-semibold prose-h2:border-l-8 prose-h2:border-l-orange-500 prose-h2:pl-2 prose-p:text-lg font-sans py-10"
-    >
-      <slot />
-    </section>
+    <span class="content-center place-content-center">
+      <section
+        class="m-auto prose dark:prose-invert md:prose-h1:text-4xl prose-h1:text-2xl md:prose-h2:text-3xl prose-h2:text-xl prose-h1:border-b-yellow-700 prose-h1:border-b-2 prose-h1:font-semibold prose-h2:border-l-8 prose-h2:border-l-orange-500 prose-h2:pl-2 prose-p:text-lg font-sans py-10 prose-img:w-full prose-a:break-all"
+      >
+        <slot />
+      </section>
+    </span>
   </article>
 </Layout>
