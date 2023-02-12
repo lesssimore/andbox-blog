@@ -4,34 +4,53 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="自己紹介" description="管理人の自己紹介ページです！">
   <article class="flex flex-col justify-center text-center">
-    <h1 class="text-5xl">自己紹介</h1>
-    <div class="flex flex-row">
-      <picture>
+    <h1 class="text-5xl p-10">自己紹介</h1>
+    <span class="flex justify-center"
+      ><picture class="align-center">
         <source srcset="/glaceon.avif" type="image/avif" />
         <source srcset="/glaceon.png" type="image/png" />
         <img src="/glaceon.png" alt="ゆっきーのアイコン" width="150px" />
       </picture>
-      <div class="flex flex-col text-left my-auto">
-        <h3 class="text-4xl">ゆっきー</h3>
-      </div>
-    </div>
+    </span>
+    <h3 class="text-4xl p-10">ゆっきー</h3>
     <div>
       <p>ポケモンと旅行、美味しい料理が好きなエンジニアです。</p>
     </div>
-    <div>
-      <h2>コンタクト</h2>
-      <ul>
+    <div class="p-2 my-2">
+      <h2 class="text-3xl p-10">Contact</h2>
+      <ul class="flex md:flex-row flex-col justify-center md:space-x-16">
         <li>
           <h3>Twitter</h3>
-          <a href="https://twitter.com/Yu_yukk_Y"></a>
+          <a href="https://twitter.com/Yu_yukk_Y">
+            <img
+              src="/twitter_like_bird.png"
+              alt="twitterアカウント"
+              width="100px"
+              class="m-auto py-8"
+            />
+          </a>
         </li>
         <li>
           <h3>Github</h3>
-          <a href="https://github.com/Yoshino-Yukitaro"></a>
+          <a href="https://github.com/Yoshino-Yukitaro" class="text-center">
+            <img
+              src="/github-mark.png"
+              alt="githubアカウント"
+              width="100px"
+              class="m-auto py-8"
+            />
+          </a>
         </li>
         <li>
           <h3>Qiita</h3>
-          <a href="https://qiita.com/Yu_yukk_Y"></a>
+          <a href="https://qiita.com/Yu_yukk_Y">
+            <img
+              src="/qiita.png"
+              alt="qiitaアカウント"
+              width="100px"
+              class="m-auto py-8"
+            />
+          </a>
         </li>
       </ul>
     </div>
