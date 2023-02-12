@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="自己紹介" description="管理人の自己紹介ページです！">
+  <article class="flex flex-col justify-center text-center p-2">
+    <h1 class="text-5xl p-10">自己紹介</h1>
+    <span class="flex justify-center"
+      ><picture class="align-center">
+        <source srcset="/glaceon.avif" type="image/avif" />
+        <source srcset="/glaceon.png" type="image/png" />
+        <img src="/glaceon.png" alt="ゆっきーのアイコン" width="150px" />
+      </picture>
+    </span>
+    <h3 class="text-4xl p-5">ゆっきー</h3>
+    <div>
+      <p class="p-4">ポケモンと旅行、美味しい料理が好きなエンジニアです。</p>
+    </div>
+    <hr class="border-orange-500" />
+    <div class="p-2 my-2">
+      <h2 class="text-3xl p-3">Contact</h2>
+      <ul class="flex md:flex-row flex-col justify-center md:space-x-16 p-3">
+        <li>
+          <h3>Twitter</h3>
+          <a href="https://twitter.com/Yu_yukk_Y">
+            <img
+              src="/twitter_like_bird.png"
+              alt="twitterアカウント"
+              width="100px"
+              class="m-auto py-8 hover:opacity-50"
+            />
+          </a>
+        </li>
+        <li>
+          <h3>Github</h3>
+          <a href="https://github.com/Yoshino-Yukitaro" class="text-center">
+            <img
+              src="/github-mark.png"
+              alt="githubアカウント"
+              width="100px"
+              class="m-auto py-8 hover:opacity-50"
+            />
+          </a>
+        </li>
+        <li>
+          <h3>Qiita</h3>
+          <a href="https://qiita.com/Yu_yukk_Y">
+            <img
+              src="/qiita.png"
+              alt="qiitaアカウント"
+              width="100px"
+              class="m-auto py-8 hover:opacity-50"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</Layout>
