@@ -43,7 +43,7 @@ const config: PlaywrightTestConfig = {
   },
   /* start server when running the testing script */
   webServer: {
-    command: "yarn start",
+    command: "pnpm start",
     url: "http://localhost:3000/",
     reuseExistingServer: !process.env.CI,
   },
