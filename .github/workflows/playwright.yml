@@ -16,7 +16,7 @@ jobs:
           node-version: 16
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm dlx playwright install --with-deps
       - name: Run Playwright tests
