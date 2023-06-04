@@ -15,15 +15,17 @@ const posts = await getPosts({
 ---
 
 <article class="w-full py-5">
-  <h1 class="text-center text-4xl font-bold py-5">記事一覧</h1>
-  {
-    posts.contents.map((post) => (
-      <PostCard
-        title={post.title}
-        description={post.description}
-        createdAt={post.createdAt}
-        url={`/post/${post.id}`}
-      />
-    ))
-  }
+  <h1 class="text-center text-4xl font-bold py-5 dark:text-white">記事一覧</h1>
+  <div class="md:rounded-3xl bg-white dark:bg-black p-5">
+    {
+      posts.contents.map((post) => (
+        <PostCard
+          title={post.title}
+          description={post.description}
+          createdAt={post.createdAt}
+          url={`/post/${post.id}`}
+        />
+      ))
+    }
+  </div>
 </article>
