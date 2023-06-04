@@ -1,13 +1,15 @@
 ---
 import Logo from "../atoms/Logo.astro";
 import HeaderNavigation from "../molecules/HeaderNavigation.astro";
+import LightDarkButton from "./LightDarkButton.astro";
 import MenuButton from "./MenuButton.astro";
 ---
 
 <header
-  class="bg-orange-500 h-20 flex flex-row items-center dark:bg-slate-700 w-screen place-content-between md:place-content-start"
+  class="bg-orange-500 h-20 flex flex-row items-center dark:bg-slate-700 w-screen"
 >
   <Logo />
   <HeaderNavigation />
+  <LightDarkButton />
   <MenuButton />
 </header>
