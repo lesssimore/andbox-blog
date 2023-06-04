@@ -74,8 +74,15 @@ const { title, description, ogType } = Astro.props;
           U+90e1, U+96f2, U+9f8d, U+ff35, U+ff37, U+ff40, U+ff9d;
       }
     </style>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body class="bg-yellow-50 dark:bg-gray-500 w-screen">
+  <body class="bg-yellow-50 dark:bg-gray-500 w-screen transition duration-300">
     <Header />
     <main class="flex justify-center">
       <slot />
