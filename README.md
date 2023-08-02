@@ -8,21 +8,21 @@
 
 ### パッケージ管理
 
-- yarn v1 系
+- pnpm 8.6.0
 
 ### メイン
 
-- Astro v1.9.2
-- tailwindcss v3.0.24
+- Astro v2.9.7
+- tailwindcss v3.3.3
 
 ### テスト
 
-- playwright v1.29.2
+- playwright v1.36.2
 
 ### リンター
 
-- eslint v8.0.1
-- prettier v2.8.2
+- eslint v8.46.0
+- prettier v2.8.8
 
 ### バックエンド SaaS
 
@@ -34,7 +34,7 @@
 
 - microCMS のアカウント
 - microCMS の API Key
-- yarn 1 系
+- pnpm 8.6 系
 
 ### 手順
 
@@ -48,7 +48,7 @@ git clone git@github.com:Yoshino-Yukitaro/yukky-sandbox.git
 
 ```shell
 cd yukky-sandbox
-yarn
+pnpm i
 ```
 
 #### .env ファイルを追加、更新する
@@ -62,7 +62,7 @@ echo "MICROCMS_API_KEY=${microcmsのAPI Key}" >> ./.env
 #### 起動してみる
 
 ```shell
-yarn run dev
+pnpm run dev
 ```
 
 `http://localhost:3000`にアクセス
