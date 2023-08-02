@@ -1,7 +1,9 @@
 import { defineConfig } from "astro/config";
 
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,7 +11,9 @@ export default defineConfig({
   site: "https://yukky-sandbox.dev/",
   vite: {
     optimizeDeps: {
-      exclude: ["fsevents"]
-    }
-  }
+      exclude: ["fsevents"],
+    },
+  },
+  output: "hybrid",
+  adapter: cloudflare(),
 });
