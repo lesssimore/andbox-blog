@@ -33,47 +33,9 @@ const { title, description, ogType } = Astro.props;
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <style>
-      @font-face {
-        font-family: "Reggae One";
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/reggaeone/v14/~CgwKClJlZ2dhZSBPbmUgBSoCCABCFAoQamFwYW5lc2VfZGVmYXVsdBAA.119.woff2)
-          format("woff2");
-        unicode-range: U+20, U+2027, U+3001-3002, U+3041-307f, U+3081-308f,
-          U+3091-3093, U+3099-309a, U+309d-309e, U+30a1-30e1, U+30e3-30ed,
-          U+30ef-30f0, U+30f2-30f4, U+30fb-30fe, U+ff0c, U+ff0e;
-      }
-      @font-face {
-        font-family: "Reggae One";
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/reggaeone/v14/~CgwKClJlZ2dhZSBPbmUgBSoCCABCFAoQamFwYW5lc2VfZGVmYXVsdBAA.117.woff2)
-          format("woff2");
-        unicode-range: U+4e, U+a0, U+3000, U+300c-300d, U+4e00, U+4e0a, U+4e2d,
-          U+4e8b, U+4eba, U+4f1a, U+5165, U+5168, U+5185, U+51fa, U+5206, U+5229,
-          U+524d, U+52d5, U+5408, U+554f, U+5831, U+5834, U+5927, U+5b9a, U+5e74,
-          U+5f0f, U+60c5, U+65b0, U+65b9, U+6642, U+6700, U+672c, U+682a, U+6b63,
-          U+6c17, U+7121, U+751f, U+7528, U+753b, U+76ee, U+793e, U+884c, U+898b,
-          U+8a18, U+9593, U+95a2, U+ff01, U+ff08-ff09;
-      }
-      @font-face {
-        font-family: "Reggae One";
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/reggaeone/v14/~CgwKClJlZ2dhZSBPbmUgBSoCCABCFAoQamFwYW5lc2VfZGVmYXVsdBAA.92.woff2)
-          format("woff2");
-        unicode-range: U+2460, U+4e5f, U+4e7e, U+4ed9, U+501f, U+502b, U+5968,
-          U+5974, U+5ac1, U+5b99, U+5ba3, U+5be7, U+5be9, U+5c64, U+5cb8, U+5ec3,
-          U+5f1f, U+616e, U+6297, U+62e0, U+62ec, U+6368, U+642d, U+65e6, U+6717,
-          U+676f, U+6b04, U+732e, U+7652, U+76ca, U+76d7, U+7802, U+7e70, U+7f6a,
-          U+8133, U+81e8, U+866b, U+878d, U+88f8, U+8a5e, U+8cdb, U+8d08, U+907a,
-          U+90e1, U+96f2, U+9f8d, U+ff35, U+ff37, U+ff40, U+ff9d;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap&text=ゆっきーの砂場" rel="stylesheet">
     <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
