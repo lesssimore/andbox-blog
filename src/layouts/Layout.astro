@@ -36,12 +36,13 @@ const { title, description, ogType } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap&text=ゆっきーの砂場" >
-    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap&text=ゆっきーの砂場" rel="stylesheet" media="print" onload='this.media="all"'>
-    <script>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap&text=ゆっきーの砂場" rel="stylesheet" media="print" onload='this.media=""'>
+    <script defer>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
+          document.documentElement.classList.add('dark')
+          localStorage.theme = 'dark';
+      }else {
+        localStorage.theme = 'light';
       }
     </script>
   </head>
