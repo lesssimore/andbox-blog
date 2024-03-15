@@ -22,4 +22,8 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
+  prefetch: {
+    defaultStrategy: "viewport",
+    prefetchAll: false,
+  },
 });
