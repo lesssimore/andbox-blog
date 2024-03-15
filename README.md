@@ -65,7 +65,7 @@ echo "MICROCMS_API_KEY=${microcmsのAPI Key}" >> ./.env
 pnpm run dev
 ```
 
-`http://localhost:3000`にアクセス
+`http://localhost:4321`にアクセス
 
 ## ご意見・質問など
 
