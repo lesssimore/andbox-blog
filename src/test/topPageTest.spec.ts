@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("test", async ({ page }) => {
-  await page.goto("http://localhost:3000/");
+  await page.goto("http://localhost:4321/");
   await page
     .getByRole("link", {
       name: "2022年12月19日 初めての投稿~このブログを作った経緯~ このブログの初めての投稿です。このブログを作った経緯とか、これから何に使うのかとかについて説明しています。今後ともよろしくお願いします。",
