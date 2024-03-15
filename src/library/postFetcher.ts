@@ -1,24 +1,24 @@
 import { createClient } from "microcms-js-sdk";
 import type { MicroCMSQueries } from "microcms-js-sdk";
 const client = createClient({
-  serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
-  apiKey: import.meta.env.MICROCMS_API_KEY,
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN as string,
+  apiKey: process.env.MICROCMS_API_KEY as string,
 });
 
-type Category = {
+interface Category {
   id: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
   revisedAt: string;
   name: string;
-};
-type Eyecatch = {
+}
+interface Eyecatch {
   url: string;
   height: number;
   width: number;
-};
-export type Post = {
+}
+export interface Post {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -29,13 +29,13 @@ export type Post = {
   category: Category;
   content: string;
   description: string;
-};
-export type PostResponse = {
+}
+export interface PostResponse {
   totalCount: number;
   offset: number;
   limit: number;
   contents: Post[];
-};
+}
 
 /**
  * 記事を複数件取得する
