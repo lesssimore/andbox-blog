@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -18,5 +18,8 @@ export default defineConfig({
   adapter: cloudflare(),
   build: {
     inlineStylesheets: "auto",
+  },
+  image: {
+    service: passthroughImageService(),
   },
 });
